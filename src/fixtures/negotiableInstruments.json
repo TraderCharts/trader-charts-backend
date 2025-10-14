@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "code": "AGRO",
+        "name": "(AGRO) ADECOAGRO S.A.",
+        "typeId": 1
+    },
+    {
+        "id": 2,
+        "code": "TRAN",
+        "name": "(TRAN) CIA DE TRANSP DE ENERGIA ELECTRICA",
+        "typeId": 1
+    }
+]

@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "code": "EMA20",
+        "type": "Indicator"
+    },
+    {
+        "id": 2,
+        "code": "SMA30",
+        "type": "Indicator"
+    }
+]
