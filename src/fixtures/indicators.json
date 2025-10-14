@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "code": "EMA20",
+        "windowSize": 20,
+        "stroke": "#3f51b5",
+        "strokeWidth": 1,
+        "type": "EMA"
+    },
+    {
+        "id": 2,
+        "code": "EMA10",
+        "windowSize": 10,
+        "stroke": "#03a9f4",
+        "strokeWidth": 3,
+        "type": "EMA"
+    }
+]

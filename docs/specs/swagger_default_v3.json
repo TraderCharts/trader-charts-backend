@@ -1,0 +1,462 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/api": {
+      "get": {
+        "summary": "/api",
+        "responses": {},
+        "tags": []
+      }
+    },
+    "/api/v3": {
+      "get": {
+        "summary": "/api/v3",
+        "responses": {},
+        "tags": []
+      }
+    },
+    "/": {
+      "get": {
+        "summary": "/",
+        "responses": {},
+        "tags": []
+      }
+    },
+    "/upload": {
+      "get": {
+        "summary": "/upload",
+        "responses": {},
+        "tags": [
+          "upload"
+        ]
+      }
+    },
+    "/photos": {
+      "post": {
+        "summary": "/photos",
+        "responses": {},
+        "tags": [
+          "photos"
+        ]
+      }
+    },
+    "/photos/{id}": {
+      "get": {
+        "summary": "/photos/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "photos"
+        ]
+      },
+      "delete": {
+        "summary": "/photos/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "photos"
+        ]
+      }
+    },
+    "/users": {
+      "get": {
+        "summary": "/users",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "created_at": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      },
+                      "sub": {
+                        "type": "string"
+                      },
+                      "given_name": {
+                        "type": "string"
+                      },
+                      "family_name": {
+                        "type": "string"
+                      },
+                      "middle_name": {
+                        "type": "string"
+                      },
+                      "nickname": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "picture": {
+                        "type": "string"
+                      },
+                      "updated_at": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "created_at",
+                      "id",
+                      "sub",
+                      "given_name",
+                      "family_name",
+                      "middle_name",
+                      "nickname",
+                      "name",
+                      "picture",
+                      "updated_at"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "users"
+        ]
+      },
+      "post": {
+        "summary": "/users",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "acknowledged": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "insertedId": {
+                      "type": "string",
+                      "example": "68eba1ee8353e4a46fbb099a"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/users/{id}": {
+      "get": {
+        "summary": "/users/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "users"
+        ]
+      },
+      "patch": {
+        "summary": "/users/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "users"
+        ]
+      },
+      "delete": {
+        "summary": "/users/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/negotiableInstrumentTypes": {
+      "get": {
+        "summary": "/negotiableInstrumentTypes",
+        "responses": {},
+        "tags": [
+          "negotiableInstrumentTypes"
+        ]
+      }
+    },
+    "/indicators": {
+      "get": {
+        "summary": "/indicators",
+        "responses": {},
+        "tags": [
+          "indicators"
+        ]
+      }
+    },
+    "/alertConditionExpressions": {
+      "get": {
+        "summary": "/alertConditionExpressions",
+        "responses": {},
+        "tags": [
+          "alertConditionExpressions"
+        ]
+      }
+    },
+    "/alertConditionOperations": {
+      "get": {
+        "summary": "/alertConditionOperations",
+        "responses": {},
+        "tags": [
+          "alertConditionOperations"
+        ]
+      }
+    },
+    "/negotiableInstruments": {
+      "get": {
+        "summary": "/negotiableInstruments",
+        "responses": {},
+        "tags": [
+          "negotiableInstruments"
+        ]
+      }
+    },
+    "/negotiableInstruments/data": {
+      "get": {
+        "summary": "/negotiableInstruments/data",
+        "responses": {},
+        "tags": [
+          "negotiableInstruments"
+        ]
+      }
+    },
+    "/bymaStocksData": {
+      "get": {
+        "summary": "/bymaStocksData",
+        "responses": {},
+        "tags": [
+          "bymaStocksData"
+        ]
+      }
+    },
+    "/alerts": {
+      "get": {
+        "summary": "/alerts",
+        "responses": {},
+        "tags": [
+          "alerts"
+        ]
+      },
+      "post": {
+        "summary": "/alerts",
+        "responses": {},
+        "tags": [
+          "alerts"
+        ]
+      }
+    },
+    "/alerts/{id}": {
+      "get": {
+        "summary": "/alerts/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "alerts"
+        ]
+      },
+      "patch": {
+        "summary": "/alerts/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "alerts"
+        ]
+      },
+      "delete": {
+        "summary": "/alerts/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "alerts"
+        ]
+      }
+    },
+    "/negotiableInstrumentsAlerts": {
+      "get": {
+        "summary": "/negotiableInstrumentsAlerts",
+        "responses": {},
+        "tags": [
+          "alerts",
+          "negotiableInstruments"
+        ]
+      },
+      "post": {
+        "summary": "/negotiableInstrumentsAlerts",
+        "responses": {},
+        "tags": [
+          "alerts",
+          "negotiableInstruments"
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "users"
+    },
+    {
+      "name": "photos"
+    },
+    {
+      "name": "upload"
+    },
+    {
+      "name": "indicators"
+    },
+    {
+      "name": "alerts"
+    },
+    {
+      "name": "alertConditionExpressions"
+    },
+    {
+      "name": "alertConditionOperations"
+    },
+    {
+      "name": "negotiableInstruments"
+    },
+    {
+      "name": "negotiableInstrumentTypes"
+    },
+    {
+      "name": "bymaStocksData"
+    }
+  ],
+  "info": {
+    "title": "Trader Charts API Documentation",
+    "version": "3.0.0",
+    "description": "<div>\n        <p>This page contains the documentation on how to use Discourse through API calls.</p>\n        <blockquote>\n          <p>⚠️ Note: If you add new endpoints, please update the swagger API Oficial documentation</p>\n        </blockquote>\n        <h3><em> *** One charting tool to rule them all *** </em></h3>\n      </div>",
+    "contact": {
+      "name": "Gonzalo Sanchez Cano",
+      "url": "https://github.com/sgonzaloc",
+      "email": "gonzalo.sanchezcano@gmail.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    },
+    "x-logo": {
+      "url": "https://avatars.githubusercontent.com/u/235483245?u=f1859a88b3e3c9d1b5a5857079c364d3746a1ad9",
+      "altText": "Trader Charts",
+      "href": "https://github.com/TraderCharts"
+    }
+  },
+  "x-redoc": {
+    "theme": {
+      "colors": {
+        "primary": {
+          "main": "#2563eb"
+        },
+        "text": {
+          "primary": "#1f2937",
+          "secondary": "#6b7280"
+        },
+        "http": {
+          "get": "#22c55e",
+          "post": "#3b82f6",
+          "put": "#eab308",
+          "delete": "#ef4444"
+        }
+      },
+      "typography": {
+        "fontFamily": "Inter, sans-serif",
+        "headings": {
+          "fontFamily": "Poppins, sans-serif",
+          "fontWeight": "600"
+        }
+      },
+      "menu": {
+        "backgroundColor": "#f9fafb",
+        "textColor": "#111827"
+      },
+      "rightPanel": {
+        "backgroundColor": "#f8fafc"
+      }
+    }
+  }
+}
