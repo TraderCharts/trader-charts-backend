@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "description": "EMA10>EMA10",
+        "sourceNegotiableInstrumentId": 1,
+        "parameter1": 1,
+        "condition": 1,
+        "parameter2": 2,
+        "targetTickers": [
+            "2",
+            "1"
+        ],
+        "userId": 1,
+        "active": false,
+        "ringing": true
+    }
+]
