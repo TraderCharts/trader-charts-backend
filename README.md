@@ -13,19 +13,21 @@
 
 ---
 
-![Node.js](https://img.shields.io/badge/Node-18.17.1-339933?logo=node.js&logoColor=white)
-![Express](https://img.shields.io/badge/Express-4.18.2-000000?logo=express&logoColor=white)
-![Babel](https://img.shields.io/badge/Babel-6.26.0-F9DC3E?logo=babel&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-6.3.0-47A248?logo=mongodb&logoColor=white)
-![Sequelize](https://img.shields.io/badge/Sequelize-6.35.2-52B0E7?logo=sequelize&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-8.11.3-4169E1?logo=postgresql&logoColor=white)
-![Mocha](https://img.shields.io/badge/Mocha-3.5.3-8D6748?logo=mocha&logoColor=white)
-![Dotenv](https://img.shields.io/badge/Dotenv-5.0.1-000000)
-![CORS](https://img.shields.io/badge/CORS-2.8.4-61DAFB)
-![Lodash](https://img.shields.io/badge/Lodash-4.17.5-3498db)
-![NPM](https://img.shields.io/badge/NPM-1.0.0-CB3837?logo=npm&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
-
+![Node.js](https://img.shields.io/badge/Node-18.17.1-0078FF?logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-4.18.2-BD00FF?logo=express&logoColor=white)
+![Babel](https://img.shields.io/badge/Babel-6.26.0-FF9A00?logo=babel&logoColor=black)
+![MongoDB](https://img.shields.io/badge/MongoDB-6.3.0-FF6F00?logo=mongodb&logoColor=white)
+![Sequelize](https://img.shields.io/badge/Sequelize-6.35.2-E3FF00?logo=sequelize&logoColor=black)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%3E=_9.5-5B8CD6?logo=postgresql&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-%3E=_5.5-5B8CD6?logo=mysql&logoColor=white)
+![MariaDB](https://img.shields.io/badge/MariaDB-%3E=_5.5-5B8CD6?logo=mariadb&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-%3E=_3-5B8CD6?logo=sqlite&logoColor=white)
+![MSSQL](https://img.shields.io/badge/MSSQL-%3E=_2012-5B8CD6?logo=microsoft-sql-server&logoColor=white)
+![Mocha](https://img.shields.io/badge/Mocha-3.5.3-D5D5FD?logo=mocha&logoColor=white)
+![Dotenv](https://img.shields.io/badge/Dotenv-5.0.1-FDE2C6)
+![CORS](https://img.shields.io/badge/CORS-2.8.4-FDC6E2)
+![Lodash](https://img.shields.io/badge/Lodash-4.17.5-D5FDD5)
+![License](https://img.shields.io/badge/License-MIT-C0C0C0)
 ---
 
 🚀 **Want to contribute?**
