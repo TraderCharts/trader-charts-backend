@@ -28,6 +28,7 @@
 ![CORS](https://img.shields.io/badge/CORS-2.8.4-FDC6E2)
 ![Lodash](https://img.shields.io/badge/Lodash-4.17.5-D5FDD5)
 ![License](https://img.shields.io/badge/License-MIT-C0C0C0)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FTraderCharts%2Ftrader-charts-backend.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FTraderCharts%2Ftrader-charts-backend?ref=badge_shield)
 ---
 
 🚀 **Want to contribute?**
@@ -220,3 +221,7 @@ Thanks goes to these wonderful people:
     </tr>
   </tbody>
 </table>
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FTraderCharts%2Ftrader-charts-backend.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FTraderCharts%2Ftrader-charts-backend?ref=badge_large)
