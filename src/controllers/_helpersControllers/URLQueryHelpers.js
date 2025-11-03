@@ -1,4 +1,4 @@
-export  function getOffsetByQuery(query) {
+export function getOffsetByQuery(query) {
     const defaultOffset = 0;
     let offset = parseInt(query.offset, defaultOffset);
     if (isNaN(offset) || offset < 1) {
@@ -6,8 +6,8 @@ export  function getOffsetByQuery(query) {
     }
     return offset;
 }
-export function getOffset(page=0, perPage=20) {
-    return page > 0 ? ((page-1) * perPage) : page;
+export function getOffset(page = 0, perPage = 20) {
+    return page > 0 ? (page - 1) * perPage : page;
 }
 export function getLimit(query) {
     const defaultLimit = 10000;

@@ -3,28 +3,29 @@ import { Op } from "sequelize";
 import { appLogger } from "../logger";
 import { getLimit, getOffset } from "./_helpersControllers/URLQueryHelpers";
 
-class BymaStocksDataRouter {
+class RssFeedsDataRouter {
     constructor(app) {
         this._router = express.Router();
-        this._bymaStockData;
+        this._rssFeedsData;
         if (process.env.DB_DIALECT === "mongodb") {
-            this._bymaStockData = require("../managers/mongodb/BymaStockData");
+            this._rssFeedsData = require("../managers/mongodb/RssFeedsData");
             appLogger.info("Loading Mongodb...");
         } else {
-            this._bymaStockData = require("../managers/sequelizeSQL/BymaStockData").default();
+            this._rssFeedsData = require("../managers/sequelizeSQL/RssFeedsData").default();
             appLogger.info("Loading Sequelize...");
         }
-        app.use("/bymaStocksData", this._router);
-        appLogger.info("BymaStocksDataRouter Loaded!");
+        app.use("/trendingNews", this._router);
+        appLogger.info("RssFeedsDataRouter Loaded!");
     }
 
     getRouter() {
         return this._router;
     }
 
-    getBymaStocksData = async (req, res) => {
+    getRssFeedsData = async (req, res) => {
         const offset = getOffset(req.query.page, req.query.perPage);
         const limit = getLimit(req.query);
+        const sort = req.query.sort;
         const ticker = req.query.ticker;
         const fromDate = req.query.from;
         const toDate = req.query.to;
@@ -35,14 +36,18 @@ class BymaStocksDataRouter {
         if (toDate) date[Op.lte] = toDate;
         if (fromDate || toDate) query.date = date;
 
-        const bymaStockData = await this._bymaStockData.getBymaStocksData({ offset, limit }, query);
-        return res.json(bymaStockData);
+        const rssFeedsData = await this._rssFeedsData.getRssFeedsData(
+            { offset, limit },
+            sort,
+            query
+        );
+        return res.json(rssFeedsData);
     };
 
-    getBymaStockData = (req, res) => {
+    getRssFeedData = (req, res) => {
         const id = req.params.id;
-        return this._bymaStockData.getBymaStockData(res, id);
+        return this._rssFeedsData.getRssFeedsData(res, id);
     };
 }
 
-export default BymaStocksDataRouter;
+export default RssFeedsDataRouter;

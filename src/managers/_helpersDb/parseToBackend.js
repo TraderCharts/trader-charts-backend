@@ -1,5 +1,6 @@
-export const  formatAlertToBackend = (alert) => {
-    let newAlert = {
+export const formatAlertToBackend = (alert) => {
+    const newAlert = {
+        id: alert.id,
         description: alert.description,
         active: alert.active,
         ringing: alert.ringing,
@@ -8,15 +9,17 @@ export const  formatAlertToBackend = (alert) => {
         conditionExpression2Id: alert.parameter2,
         sourceNegotiableInstrumentId: alert.sourceNegotiableInstrumentId,
         userId: alert.userId,
-    }
+    };
     return newAlert;
-}
+};
 
-export const formatNegotiableInstrumentToBackend = (bymaStockData, negotiableInstruments)  => {
-    const newNegotiableInstrument = negotiableInstruments.find(elem => elem.code === bymaStockData.ticker)
+export const formatNegotiableInstrumentToBackend = (bymaStockData, negotiableInstruments) => {
+    const newNegotiableInstrument = negotiableInstruments.find(
+        (elem) => elem.code === bymaStockData.ticker
+    );
     if (!newNegotiableInstrument)
-        console.error('Ticker not present in negotiableInstruments: ', bymaStockData.ticker)
-    return ({
+        console.error("Ticker not present in negotiableInstruments: ", bymaStockData.ticker);
+    return {
         ticker: bymaStockData.ticker,
         date: bymaStockData.date,
         expiration: bymaStockData.expiration,
@@ -30,5 +33,5 @@ export const formatNegotiableInstrumentToBackend = (bymaStockData, negotiableIns
         amount: bymaStockData.amount,
         userId: bymaStockData.userId,
         negotiableInstrumentId: newNegotiableInstrument.id,
-    })
-}
+    };
+};

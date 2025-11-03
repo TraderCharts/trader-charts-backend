@@ -23,12 +23,24 @@
 ![MariaDB](https://img.shields.io/badge/MariaDB-%3E=_5.5-5B8CD6?logo=mariadb&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-%3E=_3-5B8CD6?logo=sqlite&logoColor=white)
 ![MSSQL](https://img.shields.io/badge/MSSQL-%3E=_2012-5B8CD6?logo=microsoft-sql-server&logoColor=white)
-![Mocha](https://img.shields.io/badge/Mocha-3.5.3-D5D5FD?logo=mocha&logoColor=white)
-![Dotenv](https://img.shields.io/badge/Dotenv-5.0.1-FDE2C6)
-![CORS](https://img.shields.io/badge/CORS-2.8.4-FDC6E2)
-![Winston](https://img.shields.io/badge/Winston-3.18.3-D9F2FF)
-![Lodash](https://img.shields.io/badge/Lodash-4.17.5-D5FDD5)
+![Mocha](https://img.shields.io/badge/Mocha-3.5.3-A1D0FF?logo=mocha&logoColor=white)
+![Dotenv](https://img.shields.io/badge/Dotenv-5.0.1-FFE699)
+![CORS](https://img.shields.io/badge/CORS-2.8.4-FF9980)
+![Luxon](https://img.shields.io/badge/Luxon-3.7.2-CAB8FF)
+![Winston](https://img.shields.io/badge/Winston-3.18.3-F4C1C8)
+![Morgan](https://img.shields.io/badge/Morgan-1.10.1-8EE0A9)
+![ESLint](https://img.shields.io/badge/ESLint-9.37.0-B0E0D3)
+![Prettier](https://img.shields.io/badge/Prettier-3.6.2-FFE0B3)
 ![License](https://img.shields.io/badge/License-MIT-C0C0C0)
+
+---
+
+## Trader Charts Backend - Overview
+
+The **Backend** handles API requests, processes data, and serves chart information to the frontend.  
+Built with Node.js, Express, Babel, MongoDB, and PostgreSQL via Sequelize, it acts as the bridge between the data collector and the frontend.  
+[See frontend →](https://github.com/TraderCharts/trader-charts-frontend) | [See data collector →](https://github.com/TraderCharts/trader-charts-data-collector)
+
 ---
 
 🚀 **Want to contribute?**
@@ -42,10 +54,10 @@ We welcome collaborators who wish to contribute and help enhance this trading to
 > ⚠️ Important: Make sure you follow the existing project structure
 
 - _/src_
-  - _/adapters_: data access layer (DBs, APIs, external services)
-  - _/controllers_: Express routes, organized by module
-  - _/fixtures_: mock or fixture data
-  - \_/managers: business logic layer — sits between controllers and adapters, handling data processing and coordination
+    - _/adapters_: data access layer (DBs, APIs, external services)
+    - _/controllers_: Express routes, organized by module
+    - _/fixtures_: mock or fixture data
+    - \_/managers: business logic layer — sits between controllers and adapters, handling data processing and coordination
 - _/assets_: static public assets (images, CSS, client JS)
 - _/config_: configuration files
 - _/docs_: API and documentation files
@@ -81,8 +93,11 @@ It supports several database connections, SQL and mongodb, local and cloud datab
 - [x] Adding API UI Endpoints
 - [x] Adding API Documentation
 - [x] Add SQL logger
+- [x] Adding RssFeedsDataRouter, including sentiment analysis and topics
 - [x] Add Application logger
-- [x] Export logs to corresponding file
+- [x] Adding HTTP Requests logger
+- [x] Adding Code Validation & Linting
+- [x] Adding Code Auto-Formatting
 
 ## Database Connections
 
@@ -98,25 +113,25 @@ There are three environments: **development**, **development with fixtures**, an
    You just need to create an empty database. All tables and basic example data will be automatically installed at runtime.  
    To run the mocked database environment:
 
-   ```
-   npm run start-mock
-   ```
+    ```
+    npm run start-mock
+    ```
 
 2. **Development**  
    Database tables and structure will be created automatically. No fixture data will be inserted.  
    To run the development environment:
 
-   ```
-   npm run start-dev
-   ```
+    ```
+    npm run start-dev
+    ```
 
 3. **Production**  
    No data is set up automatically. You must create all tables and insert data manually.  
    To run the production environment:
 
-   ```
-   npm run start
-   ```
+    ```
+    npm run start
+    ```
 
 ## API
 
@@ -133,18 +148,18 @@ npm run generate-swagger-api
 ### 2. Access the API
 
 - **API Endpoints**
-  - Access directly at [Trader Charts API](http://localhost:3002/api)
+    - Access directly at [Trader Charts API](http://localhost:3002/api)
 
-    ![Trader Charts API Screenshot](assets/private/readme/traderChartsAPI.png)
+        ![Trader Charts API Screenshot](assets/private/readme/traderChartsAPI.png)
 
 - **API Specifications**
-  - View the [Swagger 2.0 spec](http://localhost:3002/api-spec)
-  - View the [OpenAPI 3.0 spec](http://localhost:3002/api-spec/v3)
+    - View the [Swagger 2.0 spec](http://localhost:3002/api-spec)
+    - View the [OpenAPI 3.0 spec](http://localhost:3002/api-spec/v3)
 
 - **API Documentation**
-  - Explore a clear API documentation at [Trader Charts Documentation](http://localhost:3002/docs/)
+    - Explore a clear API documentation at [Trader Charts Documentation](http://localhost:3002/docs/)
 
-    ![Trader Charts API Documentation Screenshot](assets/private/readme/traderChartsRedoc.png)
+        ![Trader Charts API Documentation Screenshot](assets/private/readme/traderChartsRedoc.png)
 
 ### Testing the API
 

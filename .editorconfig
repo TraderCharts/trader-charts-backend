@@ -1,9 +1,9 @@
 root = true
 
 [*]
-indent_style = space
-indent_size = 4
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
+charset = utf-8                 # File encoding
+indent_style = space            # Use spaces for indentation (matches Prettier)
+indent_size = 4                 # 4 spaces per level (matches Prettier's tabWidth)
+end_of_line = lf                # Use LF for line endings (matches Prettier's endOfLine)
+trim_trailing_whitespace = true # Remove trailing whitespace at the end of lines
+insert_final_newline = true     # Ensure files end with a newline

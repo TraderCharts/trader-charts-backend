@@ -15,8 +15,8 @@
   ],
   "env": {
     "build": {
-      "comments": false, // opcional: remover comentarios en build
-      "minified": true // antes usabas optional: ["optimisation", "minification"]
+      "comments": false,
+      "minified": true
     }
   }
 }

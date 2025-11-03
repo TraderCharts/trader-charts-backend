@@ -1,4 +1,4 @@
-import AppRouter from './AppRouter';
+import AppRouter from "./AppRouter";
 
 const appRouter = AppRouter();
 appRouter.initUploadRouter();
@@ -9,9 +9,10 @@ appRouter.initIndicatorsRouter();
 appRouter.initAlertConditionExpressionsRouter();
 appRouter.initAlertConditionOperationsRouter();
 appRouter.initNegotiableInstrumentsRouter();
-appRouter.initBymaStocksDataRouter();
 appRouter.initAlertsRouter();
 appRouter.initAlertsTargetNegotiableInstrumentsRouter();
 appRouter.initAlertsTargetNegotiableInstrumentsRouter();
+appRouter.initBymaStocksDataRouter();
+appRouter.initRssFeedsDataRouter();
 
 export default appRouter.getApp();

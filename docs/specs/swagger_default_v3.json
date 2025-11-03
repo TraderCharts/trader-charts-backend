@@ -57,115 +57,19 @@
         "tags": [
           "photos"
         ]
-      },
-      "delete": {
-        "summary": "/photos/{id}",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {},
-        "tags": [
-          "photos"
-        ]
       }
     },
     "/users": {
       "get": {
         "summary": "/users",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "created_at": {
-                        "type": "string"
-                      },
-                      "id": {
-                        "type": "string"
-                      },
-                      "sub": {
-                        "type": "string"
-                      },
-                      "given_name": {
-                        "type": "string"
-                      },
-                      "family_name": {
-                        "type": "string"
-                      },
-                      "middle_name": {
-                        "type": "string"
-                      },
-                      "nickname": {
-                        "type": "string"
-                      },
-                      "name": {
-                        "type": "string"
-                      },
-                      "picture": {
-                        "type": "string"
-                      },
-                      "updated_at": {
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "created_at",
-                      "id",
-                      "sub",
-                      "given_name",
-                      "family_name",
-                      "middle_name",
-                      "nickname",
-                      "name",
-                      "picture",
-                      "updated_at"
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        },
+        "responses": {},
         "tags": [
           "users"
         ]
       },
       "post": {
         "summary": "/users",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "acknowledged": {
-                      "type": "boolean",
-                      "example": true
-                    },
-                    "insertedId": {
-                      "type": "string",
-                      "example": "68eba1ee8353e4a46fbb099a"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
+        "responses": {},
         "tags": [
           "users"
         ]
@@ -278,15 +182,6 @@
         ]
       }
     },
-    "/bymaStocksData": {
-      "get": {
-        "summary": "/bymaStocksData",
-        "responses": {},
-        "tags": [
-          "bymaStocksData"
-        ]
-      }
-    },
     "/alerts": {
       "get": {
         "summary": "/alerts",
@@ -373,6 +268,226 @@
           "negotiableInstruments"
         ]
       }
+    },
+    "/bymaStocksData": {
+      "get": {
+        "summary": "/bymaStocksData",
+        "responses": {},
+        "tags": [
+          "bymaStocksData"
+        ]
+      }
+    },
+    "/trendingNews": {
+      "get": {
+        "summary": "/trendingNews",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "sourceId": {
+                        "type": "number"
+                      },
+                      "source_name": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "summary": {
+                        "type": "string"
+                      },
+                      "content": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "link": {
+                        "type": "string"
+                      },
+                      "pubDate": {
+                        "type": "string"
+                      },
+                      "source": {
+                        "type": "string"
+                      },
+                      "image_url": {
+                        "type": "string"
+                      },
+                      "author": {
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      "tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "execution_id": {
+                        "type": "string"
+                      },
+                      "sentiment_info": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "_id": {
+                              "type": "string"
+                            },
+                            "feedId": {
+                              "type": "string"
+                            },
+                            "model_used": {
+                              "type": "string"
+                            },
+                            "model_name": {
+                              "type": "string"
+                            },
+                            "sentiment_label": {
+                              "type": "string"
+                            },
+                            "sentiment_confidence": {
+                              "type": "number"
+                            },
+                            "sentiment_emoji": {
+                              "type": "string"
+                            },
+                            "all_scores": {
+                              "type": "object",
+                              "properties": {
+                                "neutral": {
+                                  "type": "number"
+                                },
+                                "positive": {
+                                  "type": "number"
+                                },
+                                "negative": {
+                                  "type": "number"
+                                }
+                              }
+                            },
+                            "text_preview": {
+                              "type": "string"
+                            },
+                            "analysis_date": {
+                              "type": "string"
+                            },
+                            "source": {
+                              "type": "string"
+                            },
+                            "pubDate": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "_id",
+                            "feedId",
+                            "model_used",
+                            "model_name",
+                            "sentiment_label",
+                            "sentiment_confidence",
+                            "sentiment_emoji",
+                            "all_scores",
+                            "text_preview",
+                            "analysis_date",
+                            "source",
+                            "pubDate"
+                          ]
+                        }
+                      },
+                      "topic_info": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "_id": {
+                              "type": "string"
+                            },
+                            "feedId": {
+                              "type": "string"
+                            },
+                            "analysis_date": {
+                              "type": "string"
+                            },
+                            "keyphrases": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "phrase": {
+                                    "type": "string"
+                                  },
+                                  "score": {
+                                    "type": "number"
+                                  }
+                                },
+                                "required": [
+                                  "phrase",
+                                  "score"
+                                ]
+                              }
+                            },
+                            "text_preview": {
+                              "type": "string"
+                            },
+                            "source": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "processed_text_length": {
+                              "type": "number"
+                            }
+                          },
+                          "required": [
+                            "_id",
+                            "feedId",
+                            "analysis_date",
+                            "keyphrases",
+                            "text_preview",
+                            "source",
+                            "title",
+                            "processed_text_length"
+                          ]
+                        }
+                      }
+                    },
+                    "required": [
+                      "sourceId",
+                      "source_name",
+                      "title",
+                      "summary",
+                      "content",
+                      "description",
+                      "link",
+                      "pubDate",
+                      "source",
+                      "image_url",
+                      "author",
+                      "tags",
+                      "execution_id",
+                      "sentiment_info",
+                      "topic_info"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "trendingNews"
+        ]
+      }
     }
   },
   "tags": [
@@ -405,6 +520,9 @@
     },
     {
       "name": "bymaStocksData"
+    },
+    {
+      "name": "trendingNews"
     }
   ],
   "info": {
