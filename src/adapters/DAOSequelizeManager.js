@@ -56,10 +56,7 @@ class DAOSequelizeManager {
                 appLogger.info(
                     `Connection has been established successfully to database '${this._dbName}' from HOST '${this._dbHost}'`
                 );
-                if (
-                    process.env.NODE_ENV !== "production" &&
-                    process.env.LOAD_MOCK_DATA === "true"
-                ) {
+                if (process.env.NODE_ENV === "mock") {
                     this.sync();
                 }
             })
@@ -80,6 +77,7 @@ class DAOSequelizeManager {
                 appLogger.info(
                     "sync successfully! All missing tables were created automatically by Sequelize on database, with foreignKeys and join tables"
                 );
+                appLogger.info("Syncing...");
                 appLogger.info("\nAdding fixtures on SQL database ...");
                 await User().syncFixtures();
                 await NegotiableInstrumentType().syncFixtures();
@@ -87,11 +85,9 @@ class DAOSequelizeManager {
                 await AlertConditionExpression().syncFixtures();
                 await AlertConditionOperation().syncFixtures();
                 await Indicator().syncFixtures();
-                if (process.env.NODE_ENV === "development") {
-                    await Alert().syncFixtures();
-                    await AlertsTargetNegotiableInstruments().syncFixtures();
-                    await BymaStockData().syncFixtures();
-                }
+                await Alert().syncFixtures();
+                await AlertsTargetNegotiableInstruments().syncFixtures();
+                await BymaStockData().syncFixtures();
                 appLogger.info("Fixtures Added!");
             })
             .catch((e) => {

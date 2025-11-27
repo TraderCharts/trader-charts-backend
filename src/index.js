@@ -1,4 +1,4 @@
-import "../loadDotEnv";
+import "./loadDotEnv";
 import app from "./controllers";
 
 const afterRun = function () {

@@ -1,5 +1,5 @@
 import expressOasGenerator from "express-oas-generator";
-import "../loadDotEnv.js";
+import "./src/loadDotEnv.js";
 import app from "../src/controllers/index.js";
 import loadDefaultSwaggerSpecs from "./loadDefaultSwaggerSpecs.js";
 

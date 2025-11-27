@@ -1,22 +1,22 @@
 {
-  "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "targets": {
-          "node": "current"
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "node": "current"
+                }
+            }
+        ]
+    ],
+    "plugins": [
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        ["@babel/plugin-proposal-class-properties", { "loose": true }]
+    ],
+    "env": {
+        "build": {
+            "comments": false,
+            "minified": true
         }
-      }
-    ]
-  ],
-  "plugins": [
-    ["@babel/plugin-proposal-decorators", { "legacy": true }],
-    ["@babel/plugin-proposal-class-properties", { "loose": true }]
-  ],
-  "env": {
-    "build": {
-      "comments": false,
-      "minified": true
     }
-  }
 }

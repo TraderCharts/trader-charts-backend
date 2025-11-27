@@ -45,11 +45,9 @@ const sync = async () => {
         await AlertConditionExpression.syncFixtures();
         await AlertConditionOperation.syncFixtures();
         await Indicators.syncFixtures();
-        if (process.env.NODE_ENV === "development") {
-            await Alert.syncFixtures();
-            await AlertsTargetNegotiableInstruments.syncFixtures();
-            await BymaStockData.syncFixtures();
-        }
+        await Alert.syncFixtures();
+        await AlertsTargetNegotiableInstruments.syncFixtures();
+        await BymaStockData.syncFixtures();
         appLogger.info("\nFixtures Added!");
     } catch (e) {
         console.error("Unable to sync", e);
@@ -61,9 +59,7 @@ const DAOMongodbManagerSingleton = () => {
     if (!DAOMongodbManagerPromise) {
         DAOMongodbManagerPromise = (async () => {
             const db = await MongodbManager();
-            console.log("process.env.NODE_ENV", process.env.NODE_ENV);
-            console.log("process.env.LOAD_MOCK_DATA", process.env.LOAD_MOCK_DATA);
-            if (process.env.NODE_ENV !== "production" && process.env.LOAD_MOCK_DATA === "true") {
+            if (process.env.NODE_ENV === "mock") {
                 appLogger.info("Syncing...");
                 sync().catch((err) => console.error("Sync failed", err));
             }

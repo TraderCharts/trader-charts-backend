@@ -1,9 +1,7 @@
 import cors from "cors";
 import express from "express";
-import expressOasGenerator from "express-oas-generator";
 import morgan from "morgan";
 import path from "path";
-import swaggerConfig from "../../config/swaggerConfig.js";
 import { appLogger } from "../logger";
 import File from "../managers/fileSystem/File.js";
 import { validatePhotoRequestMiddleware } from "./_helpersControllers/Photo";
@@ -40,11 +38,23 @@ const createAppRouter = () => {
     app.use(morgan("dev"));
 
     const corsUrl =
-        process.env.NODE_ENV === "production" ? process.env.HOST_ALLOWED : "http://localhost:3001";
+        process.env.NODE_ENV === "production"
+            ? process.env.PUBLIC_HOST_ALLOWED
+            : process.env.HOST_ALLOWED;
     app.use(cors({ origin: corsUrl }));
 
-    expressOasGenerator.handleResponses(app, swaggerConfig);
-    app.get("/", (req, res) => res.send("test route for codeship environment"));
+    if (process.env.NODE_ENV !== "production") {
+        const expressOasGenerator = require("express-oas-generator");
+        const swaggerConfig = require("../../config/swaggerConfig.js");
+        expressOasGenerator.handleResponses(app, swaggerConfig);
+    }
+    app.get("/health", (_, res) => {
+        res.status(200).json({
+            status: "OK",
+            service: "trader-charts-backend",
+            timestamp: new Date().toISOString(),
+        });
+    });
     appLogger.info("AppRouter Loaded!");
 
     const initPhotoRouter = () => {
