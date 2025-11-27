@@ -1,0 +1,14 @@
+# Inherits exclusions from .gitignore
+# Add Docker-specific exclusions below
+# trader-charts-backend/.dockerignore
+node_modules/
+dist/
+build/
+.git/
+logs/
+assets/
+docs/
+coverage/
+*.log
+.env
+.DS_Store

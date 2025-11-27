@@ -1,0 +1,580 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/api": {
+      "get": {
+        "summary": "/api",
+        "responses": {},
+        "tags": []
+      }
+    },
+    "/api/v3": {
+      "get": {
+        "summary": "/api/v3",
+        "responses": {},
+        "tags": []
+      }
+    },
+    "/": {
+      "get": {
+        "summary": "/",
+        "responses": {},
+        "tags": []
+      }
+    },
+    "/upload": {
+      "get": {
+        "summary": "/upload",
+        "responses": {},
+        "tags": [
+          "upload"
+        ]
+      }
+    },
+    "/photos": {
+      "post": {
+        "summary": "/photos",
+        "responses": {},
+        "tags": [
+          "photos"
+        ]
+      }
+    },
+    "/photos/{id}": {
+      "get": {
+        "summary": "/photos/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "photos"
+        ]
+      }
+    },
+    "/users": {
+      "get": {
+        "summary": "/users",
+        "responses": {},
+        "tags": [
+          "users"
+        ]
+      },
+      "post": {
+        "summary": "/users",
+        "responses": {},
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/users/{id}": {
+      "get": {
+        "summary": "/users/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "users"
+        ]
+      },
+      "patch": {
+        "summary": "/users/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "users"
+        ]
+      },
+      "delete": {
+        "summary": "/users/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "users"
+        ]
+      }
+    },
+    "/negotiableInstrumentTypes": {
+      "get": {
+        "summary": "/negotiableInstrumentTypes",
+        "responses": {},
+        "tags": [
+          "negotiableInstrumentTypes"
+        ]
+      }
+    },
+    "/indicators": {
+      "get": {
+        "summary": "/indicators",
+        "responses": {},
+        "tags": [
+          "indicators"
+        ]
+      }
+    },
+    "/alertConditionExpressions": {
+      "get": {
+        "summary": "/alertConditionExpressions",
+        "responses": {},
+        "tags": [
+          "alertConditionExpressions"
+        ]
+      }
+    },
+    "/alertConditionOperations": {
+      "get": {
+        "summary": "/alertConditionOperations",
+        "responses": {},
+        "tags": [
+          "alertConditionOperations"
+        ]
+      }
+    },
+    "/negotiableInstruments": {
+      "get": {
+        "summary": "/negotiableInstruments",
+        "responses": {},
+        "tags": [
+          "negotiableInstruments"
+        ]
+      }
+    },
+    "/negotiableInstruments/data": {
+      "get": {
+        "summary": "/negotiableInstruments/data",
+        "responses": {},
+        "tags": [
+          "negotiableInstruments"
+        ]
+      }
+    },
+    "/alerts": {
+      "get": {
+        "summary": "/alerts",
+        "responses": {},
+        "tags": [
+          "alerts"
+        ]
+      },
+      "post": {
+        "summary": "/alerts",
+        "responses": {},
+        "tags": [
+          "alerts"
+        ]
+      }
+    },
+    "/alerts/{id}": {
+      "get": {
+        "summary": "/alerts/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "alerts"
+        ]
+      },
+      "patch": {
+        "summary": "/alerts/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "alerts"
+        ]
+      },
+      "delete": {
+        "summary": "/alerts/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "alerts"
+        ]
+      }
+    },
+    "/negotiableInstrumentsAlerts": {
+      "get": {
+        "summary": "/negotiableInstrumentsAlerts",
+        "responses": {},
+        "tags": [
+          "alerts",
+          "negotiableInstruments"
+        ]
+      },
+      "post": {
+        "summary": "/negotiableInstrumentsAlerts",
+        "responses": {},
+        "tags": [
+          "alerts",
+          "negotiableInstruments"
+        ]
+      }
+    },
+    "/bymaStocksData": {
+      "get": {
+        "summary": "/bymaStocksData",
+        "responses": {},
+        "tags": [
+          "bymaStocksData"
+        ]
+      }
+    },
+    "/trendingNews": {
+      "get": {
+        "summary": "/trendingNews",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "sourceId": {
+                        "type": "number"
+                      },
+                      "source_name": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "summary": {
+                        "type": "string"
+                      },
+                      "content": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "link": {
+                        "type": "string"
+                      },
+                      "pubDate": {
+                        "type": "string"
+                      },
+                      "source": {
+                        "type": "string"
+                      },
+                      "image_url": {
+                        "type": "string"
+                      },
+                      "author": {
+                        "nullable": true,
+                        "type": "string"
+                      },
+                      "tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "execution_id": {
+                        "type": "string"
+                      },
+                      "sentiment_info": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "_id": {
+                              "type": "string"
+                            },
+                            "feedId": {
+                              "type": "string"
+                            },
+                            "model_used": {
+                              "type": "string"
+                            },
+                            "model_name": {
+                              "type": "string"
+                            },
+                            "sentiment_label": {
+                              "type": "string"
+                            },
+                            "sentiment_confidence": {
+                              "type": "number"
+                            },
+                            "sentiment_emoji": {
+                              "type": "string"
+                            },
+                            "all_scores": {
+                              "type": "object",
+                              "properties": {
+                                "neutral": {
+                                  "type": "number"
+                                },
+                                "positive": {
+                                  "type": "number"
+                                },
+                                "negative": {
+                                  "type": "number"
+                                }
+                              }
+                            },
+                            "text_preview": {
+                              "type": "string"
+                            },
+                            "analysis_date": {
+                              "type": "string"
+                            },
+                            "source": {
+                              "type": "string"
+                            },
+                            "pubDate": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "_id",
+                            "feedId",
+                            "model_used",
+                            "model_name",
+                            "sentiment_label",
+                            "sentiment_confidence",
+                            "sentiment_emoji",
+                            "all_scores",
+                            "text_preview",
+                            "analysis_date",
+                            "source",
+                            "pubDate"
+                          ]
+                        }
+                      },
+                      "topic_info": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "_id": {
+                              "type": "string"
+                            },
+                            "feedId": {
+                              "type": "string"
+                            },
+                            "analysis_date": {
+                              "type": "string"
+                            },
+                            "keyphrases": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "phrase": {
+                                    "type": "string"
+                                  },
+                                  "score": {
+                                    "type": "number"
+                                  }
+                                },
+                                "required": [
+                                  "phrase",
+                                  "score"
+                                ]
+                              }
+                            },
+                            "text_preview": {
+                              "type": "string"
+                            },
+                            "source": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "processed_text_length": {
+                              "type": "number"
+                            }
+                          },
+                          "required": [
+                            "_id",
+                            "feedId",
+                            "analysis_date",
+                            "keyphrases",
+                            "text_preview",
+                            "source",
+                            "title",
+                            "processed_text_length"
+                          ]
+                        }
+                      }
+                    },
+                    "required": [
+                      "sourceId",
+                      "source_name",
+                      "title",
+                      "summary",
+                      "content",
+                      "description",
+                      "link",
+                      "pubDate",
+                      "source",
+                      "image_url",
+                      "author",
+                      "tags",
+                      "execution_id",
+                      "sentiment_info",
+                      "topic_info"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "trendingNews"
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "users"
+    },
+    {
+      "name": "photos"
+    },
+    {
+      "name": "upload"
+    },
+    {
+      "name": "indicators"
+    },
+    {
+      "name": "alerts"
+    },
+    {
+      "name": "alertConditionExpressions"
+    },
+    {
+      "name": "alertConditionOperations"
+    },
+    {
+      "name": "negotiableInstruments"
+    },
+    {
+      "name": "negotiableInstrumentTypes"
+    },
+    {
+      "name": "bymaStocksData"
+    },
+    {
+      "name": "trendingNews"
+    }
+  ],
+  "info": {
+    "title": "Trader Charts API Documentation",
+    "version": "3.0.0",
+    "description": "<div>\n        <p>This page contains the documentation on how to use Discourse through API calls.</p>\n        <blockquote>\n          <p>⚠️ Note: If you add new endpoints, please update the swagger API Oficial documentation</p>\n        </blockquote>\n        <h3><em> *** One charting tool to rule them all *** </em></h3>\n      </div>",
+    "contact": {
+      "name": "Gonzalo Sanchez Cano",
+      "url": "https://github.com/sgonzaloc",
+      "email": "gonzalo.sanchezcano@gmail.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    },
+    "x-logo": {
+      "url": "https://avatars.githubusercontent.com/u/235483245?u=f1859a88b3e3c9d1b5a5857079c364d3746a1ad9",
+      "altText": "Trader Charts",
+      "href": "https://github.com/TraderCharts"
+    }
+  },
+  "x-redoc": {
+    "theme": {
+      "colors": {
+        "primary": {
+          "main": "#2563eb"
+        },
+        "text": {
+          "primary": "#1f2937",
+          "secondary": "#6b7280"
+        },
+        "http": {
+          "get": "#22c55e",
+          "post": "#3b82f6",
+          "put": "#eab308",
+          "delete": "#ef4444"
+        }
+      },
+      "typography": {
+        "fontFamily": "Inter, sans-serif",
+        "headings": {
+          "fontFamily": "Poppins, sans-serif",
+          "fontWeight": "600"
+        }
+      },
+      "menu": {
+        "backgroundColor": "#f9fafb",
+        "textColor": "#111827"
+      },
+      "rightPanel": {
+        "backgroundColor": "#f8fafc"
+      }
+    }
+  }
+}
