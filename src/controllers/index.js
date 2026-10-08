@@ -14,5 +14,6 @@ appRouter.initAlertsTargetNegotiableInstrumentsRouter();
 appRouter.initAlertsTargetNegotiableInstrumentsRouter();
 appRouter.initBymaStocksDataRouter();
 appRouter.initRssFeedsDataRouter();
+appRouter.initWatchlistsRouter();
 
 export default appRouter.getApp();

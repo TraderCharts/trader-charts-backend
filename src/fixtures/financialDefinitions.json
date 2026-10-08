@@ -1,0 +1,58 @@
+[
+    {
+        "_id": "69f0c7a1b8977cffb8ea7e0f",
+        "id": 1,
+        "name": "Residual Value",
+        "description": "Remaining capital after paid amortizations",
+        "formula": "Face Value - Σ(applied amortizations)"
+    },
+    {
+        "_id": "69f0c7a1b8977cffb8ea7e10",
+        "id": 2,
+        "name": "Accrued Interest",
+        "description": "Interest accrued since last coupon payment",
+        "formula": "(Residual Value × Coupon Rate × Days) / 365"
+    },
+    {
+        "_id": "69f0c7a1b8977cffb8ea7e11",
+        "id": 3,
+        "name": "Technical Value",
+        "description": "Residual Value plus Accrued Interest",
+        "formula": "Residual Value + Accrued Interest"
+    },
+    {
+        "_id": "69f0c7a1b8977cffb8ea7e12",
+        "id": 4,
+        "name": "Parity",
+        "description": "Price to Technical Value ratio",
+        "formula": "(Price / Technical Value) × 100"
+    },
+    {
+        "_id": "69f0c7a1b8977cffb8ea7e13",
+        "id": 5,
+        "name": "Coupon Rate",
+        "description": "Annual interest rate on Residual Value",
+        "formula": "From prospectus by applicable date"
+    },
+    {
+        "_id": "69f0c7a1b8977cffb8ea7e14",
+        "id": 6,
+        "name": "Annual Income",
+        "description": "Total annual interest generated",
+        "formula": "Residual Value × Coupon Rate"
+    },
+    {
+        "_id": "69f0c7a1b8977cffb8ea7e15",
+        "id": 7,
+        "name": "Coupon Income",
+        "description": "Interest paid per coupon period",
+        "formula": "Residual Value × (Coupon Rate / 2)"
+    },
+    {
+        "_id": "69f0c7a1b8977cffb8ea7e16",
+        "id": 8,
+        "name": "Current Yield",
+        "description": "Annual return from interest vs price paid",
+        "formula": "Annual Income / (Price × Residual Value - Accrued Interest)"
+    }
+]

@@ -11,7 +11,9 @@ export function getOffset(page = 0, perPage = 20) {
 }
 export function getLimit(query) {
     const defaultLimit = 10000;
-    let limit = parseInt(query.limit, defaultLimit);
+
+    let limit = parseInt(query.limit, 10);
+
     if (isNaN(limit)) {
         limit = defaultLimit;
     } else if (limit > defaultLimit) {
@@ -19,5 +21,6 @@ export function getLimit(query) {
     } else if (limit < 1) {
         limit = 1;
     }
+
     return limit;
 }

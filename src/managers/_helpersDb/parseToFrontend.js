@@ -6,15 +6,14 @@ export const formatObjectIdToFrontend = (elem) => {
     delete res._id;
     return res;
 };
-export const formatNegotiableInstrumentToFrontend = (negotiableInstrumentData) => {
-    return {
-        id: negotiableInstrumentData.id,
-        ticker: negotiableInstrumentData.code,
-        name: negotiableInstrumentData.name,
-        icon: negotiableInstrumentData.icon,
-    };
-};
-
+export const formatNegotiableInstrumentToFrontend = (negotiableInstrumentData) => ({
+    id: negotiableInstrumentData.id,
+    ticker: negotiableInstrumentData.code,
+    name: negotiableInstrumentData.name,
+    icon: negotiableInstrumentData.icon,
+    type: negotiableInstrumentData.type,
+    bondTermsId: negotiableInstrumentData.bondTermsId,
+});
 export const formatAlertToFrontend = (alert) => {
     return {
         id: alert.id,

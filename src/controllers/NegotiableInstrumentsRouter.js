@@ -37,6 +37,28 @@ class NegotiableInstrumentsRouter {
         );
         return res.json(negotiableInstruments);
     };
+
+    getBondTermsByTickers = async (req, res) => {
+        try {
+            const { tickers } = req.body;
+
+            if (!Array.isArray(tickers) || tickers.length === 0) {
+                return res.status(400).json({
+                    error: "Tickers are required",
+                });
+            }
+
+            const bondTerms = await this._negotiableInstrument.getBondTermsByTickers(tickers);
+
+            return res.json(bondTerms);
+        } catch (error) {
+            appLogger.error("Error in getBondTermsByTickers:", error);
+
+            return res.status(500).json({
+                error: error.message,
+            });
+        }
+    };
 }
 
 export default NegotiableInstrumentsRouter;

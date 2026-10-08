@@ -75,3 +75,10 @@ export const deleteUser = async (id) => {
     const deletedUser = await collection.deleteOne(query);
     return deletedUser;
 };
+
+export const getUserBySub = async (sub) => {
+    const db = await MongodbManager();
+    const collection = await db.collection("users");
+
+    return collection.findOne({ sub });
+};

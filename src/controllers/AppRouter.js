@@ -17,6 +17,7 @@ import PhotoRouter from "./PhotoRouter";
 import RssFeedsDataRouter from "./RssFeedsDataRouter.js";
 import UploadRouter from "./UploadRouter";
 import UsersRouter from "./UsersRouter";
+import WatchlistsRouter from "./WatchlistsRouter";
 
 const createAppRouter = () => {
     const app = express();
@@ -89,6 +90,7 @@ const createAppRouter = () => {
         const router = new NegotiableInstrumentsRouter(app);
         router.getRouter().get("/", router.getNegotiableInstruments);
         router.getRouter().get("/data", router.getNegotiableInstruments);
+        router.getRouter().post("/bond-terms", router.getBondTermsByTickers);
     };
 
     const initNegotiableInstrumentTypesRouter = () => {
@@ -114,6 +116,8 @@ const createAppRouter = () => {
     const initBymaStocksDataRouter = () => {
         const router = new BymaStocksDataRouter(app);
         router.getRouter().get("/", router.getBymaStocksData);
+        router.getRouter().post("/latest", router.getLatestBymaStocksData);
+        router.getRouter().post("/expression", router.getBymaStocksDataByExpression);
     };
 
     const initRssFeedsDataRouter = () => {
@@ -136,6 +140,14 @@ const createAppRouter = () => {
         router.getRouter().post("/", router.postAlertsTargetNegotiableInstruments);
     };
 
+    const initWatchlistsRouter = () => {
+        const router = new WatchlistsRouter(app);
+
+        router.getRouter().get("/", router.getWatchlists);
+        router.getRouter().post("/tickers", router.addTicker);
+        router.getRouter().delete("/tickers", router.removeTicker);
+    };
+
     return {
         getApp: () => app,
         initPhotoRouter,
@@ -150,6 +162,7 @@ const createAppRouter = () => {
         initRssFeedsDataRouter,
         initAlertsRouter,
         initAlertsTargetNegotiableInstrumentsRouter,
+        initWatchlistsRouter,
     };
 };
 

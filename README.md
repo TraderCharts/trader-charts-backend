@@ -33,13 +33,15 @@
 ![Prettier](https://img.shields.io/badge/Prettier-3.6.2-FFE0B3)
 ![License](https://img.shields.io/badge/License-MIT-C0C0C0)
 
+> **Documentation updated through:** `v6.x`
+
 ---
 
 ## Trader Charts Backend - Overview
 
 The **Backend** handles API requests, processes data, and serves chart information to the frontend.  
-Built with Node.js, Express, Babel, MongoDB, and PostgreSQL via Sequelize, it acts as the bridge between the data collector and the frontend.  
-[See frontend →](https://github.com/TraderCharts/trader-charts-frontend) | [See data collector →](https://github.com/TraderCharts/trader-charts-data-collector)
+Built with Node.js, Express, Babel, MongoDB, and PostgreSQL via Sequelize, it acts as the bridge between the compute services and the frontend.  
+[See frontend →](https://github.com/TraderCharts/trader-charts-frontend) | [See compute services →](https://github.com/TraderCharts/trader-charts-data-collector)
 
 ---
 
@@ -75,29 +77,58 @@ It supports several database connections, SQL and mongodb, local and cloud datab
 
         $ npm ci
 
-## Roadmap 🛤️
+## Features & Capabilities
 
-### Included features
+### Core API
 
-- [x] Adding AppRouter
-- [x] Adding UploadRouter
-- [x] Adding PhotoRouter
-- [x] Adding UsersRouter
-- [x] Adding NegotiableInstrumentTypesRouter
-- [x] Adding IndicatorsRouter
-- [x] Adding AlertConditionExpressionsRouter
-- [x] Adding AlertConditionOperationsRouter
-- [x] Adding NegotiableInstrumentsRouter
-- [x] Adding BymaStocksDataRouter
-- [x] Adding AlertsTargetNegotiableInstrumentsRouter
-- [x] Adding API UI Endpoints
-- [x] Adding API Documentation
-- [x] Add SQL logger
-- [x] Adding RssFeedsDataRouter, including sentiment analysis and topics
-- [x] Add Application logger
-- [x] Adding HTTP Requests logger
-- [x] Adding Code Validation & Linting
-- [x] Adding Code Auto-Formatting
+- Express-based REST API with modular routers, controllers, adapters, and business logic
+- User management and authentication
+- Negotiable instruments and instrument type management
+- Indicators and alert condition management
+- Alert condition expressions and operations
+- API UI endpoints
+
+### Market & Financial Data
+
+- BYMA market data integration
+- Configurable market data interval selection
+- Bond financial metrics and calculations
+- Financial instrument types and bond terms integration
+- Daily market changes and bond market metrics
+
+### Market Intelligence
+
+- RSS feed aggregation
+- News sentiment analysis and topic classification
+- Trending news endpoints with AI-powered details
+
+### Watchlists
+
+- User-based watchlist management
+- Ticker persistence
+- Integration with market data
+
+### API Documentation
+
+- Swagger 2.0 API specification
+- OpenAPI 3.0 API specification
+- Redoc API documentation
+- Automated API specification generation
+
+### Logging & Code Quality
+
+- SQL query logging
+- Application logging
+- HTTP request logging
+- Code validation and linting
+- Automated code formatting
+
+### Deployment & Infrastructure
+
+- Node.js 18, Express 4, and Babel 6 compatibility
+- Docker support
+- Docker Compose orchestration
+- Kubernetes deployment support
 
 ## Database Connections
 
@@ -122,7 +153,7 @@ There are three environments: **development**, **development with fixtures**, an
    To run the development environment:
 
     ```
-    npm run start-dev
+    npm run start-develop
     ```
 
 3. **Production**  
