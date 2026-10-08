@@ -1,0 +1,153 @@
+[
+    {
+        "_id": "00000001e9755e12524d9722",
+        "id": 1,
+        "code": "AGRO",
+        "name": "(AGRO) ADECOAGRO S.A.",
+        "typeId": "00000001e9755e12524d971f",
+        "icon": "agroIcon",
+        "reference_text": "Agro, accion, BYMA, Bolsa de Comercio de Buenos Aires, Gobierno Nacional, Argentina, Mercado Bursatil"
+    },
+    {
+        "_id": "00000002e9755e12524d9723",
+        "id": 2,
+        "code": "TRAN",
+        "name": "(TRAN) CIA DE TRANSP DE ENERGIA ELECTRICA",
+        "typeId": "00000001e9755e12524d971f",
+        "icon": "tranIcon"
+    },
+    {
+        "_id": "68eebb6588646d0450f35281",
+        "id": 3,
+        "code": "AL35D",
+        "name": "(AL35D) AL35D BONO USD 2035 L.A.",
+        "typeId": "00000002e9755e12524d9720",
+        "icon": "argentinaIcon",
+        "bondTermsId": "69f13b23fd30dea978ea7e0f"
+    },
+    {
+        "_id": "68ef4cc688646d0450f3528b",
+        "id": 4,
+        "code": "AL30D",
+        "name": "(AL30D) AL30D BONO USD 2030 L.A.",
+        "typeId": "00000002e9755e12524d9720",
+        "icon": "argentinaIcon",
+        "bondTermsId": "69efff2d3628dd0ecbea7e0f"
+    },
+    {
+        "_id": "68ef580c88646d0450f35293",
+        "id": 5,
+        "code": "AL30",
+        "name": "(AL30) AL30 BONO USD 2030 L.A.",
+        "typeId": "00000002e9755e12524d9720",
+        "icon": "argentinaIcon",
+        "bondTermsId": "69efff2d3628dd0ecbea7e0f"
+    },
+    {
+        "_id": "68f0571588646d0450f352aa",
+        "id": 6,
+        "code": "DOLAR MEP",
+        "name": "(MEP) DOLAR MEP",
+        "typeId": "68f056d388646d0450f352a7",
+        "icon": "argentinaIcon"
+    },
+    {
+        "_id": "69c49740de7822302f23ad65",
+        "id": 7,
+        "code": "GD30D",
+        "name": "(GD30D) GD30D BONO USD 2030 L.N.Y.",
+        "typeId": "00000002e9755e12524d9720",
+        "icon": "argentinaIcon",
+        "bondTermsId": "69f13b23fd30dea978ea7e14"
+    },
+    {
+        "_id": "69c49755de7822302f23ad66",
+        "id": 8,
+        "code": "GD35D",
+        "name": "(GD35D) GD35D BONO USD 2035 L.N.Y.",
+        "typeId": "00000002e9755e12524d9720",
+        "icon": "argentinaIcon",
+        "bondTermsId": "69f13b23fd30dea978ea7e15"
+    },
+    {
+        "_id": "69c4977cde7822302f23ad67",
+        "id": 9,
+        "code": "GD29D",
+        "name": "(GD29D) GD29D BONO USD 2029 L.N.Y.",
+        "typeId": "00000002e9755e12524d9720",
+        "icon": "argentinaIcon",
+        "bondTermsId": "69f13b23fd30dea978ea7e19"
+    },
+    {
+        "_id": "69c4979ede7822302f23ad68",
+        "id": 10,
+        "code": "AL29D",
+        "name": "(AL29D) AL29D BONO USD 2029 L.A.",
+        "typeId": "00000002e9755e12524d9720",
+        "icon": "argentinaIcon",
+        "bondTermsId": "69f13b23fd30dea978ea7e13"
+    },
+    {
+        "_id": "69c497c4de7822302f23ad69",
+        "id": 11,
+        "code": "BA7DD",
+        "name": "(BA7DD) BA7DD BONO USD 2030 L.A.",
+        "typeId": "00000002e9755e12524d9720",
+        "icon": "argentinaIcon",
+        "bondTermsId": "69efff2d3628dd0ecbea7e10"
+    },
+    {
+        "_id": "69f13c135fed325bc6ea7e0f",
+        "id": 12,
+        "code": "AL38D",
+        "name": "(AL38D) AL38D BONO USD 2038 L.A.",
+        "typeId": "00000002e9755e12524d9720",
+        "icon": "argentinaIcon",
+        "bondTermsId": "69f13b23fd30dea978ea7e10"
+    },
+    {
+        "_id": "69f13c135fed325bc6ea7e10",
+        "id": 13,
+        "code": "AL41D",
+        "name": "(AL41D) AL41D BONO USD 2041 L.A.",
+        "typeId": "00000002e9755e12524d9720",
+        "icon": "argentinaIcon",
+        "bondTermsId": "69f13b23fd30dea978ea7e11"
+    },
+    {
+        "_id": "69f13c135fed325bc6ea7e11",
+        "id": 14,
+        "code": "AL46D",
+        "name": "(AL46D) AL46D BONO USD 2046 L.A.",
+        "typeId": "00000002e9755e12524d9720",
+        "icon": "argentinaIcon",
+        "bondTermsId": "69f13b23fd30dea978ea7e12"
+    },
+    {
+        "_id": "69f13c135fed325bc6ea7e12",
+        "id": 15,
+        "code": "GD38D",
+        "name": "(GD38D) GD38D BONO USD 2038 L.N.Y.",
+        "typeId": "00000002e9755e12524d9720",
+        "icon": "argentinaIcon",
+        "bondTermsId": "69f13b23fd30dea978ea7e16"
+    },
+    {
+        "_id": "69f13c135fed325bc6ea7e13",
+        "id": 16,
+        "code": "GD41D",
+        "name": "(GD41D) GD41D BONO USD 2041 L.N.Y.",
+        "typeId": "00000002e9755e12524d9720",
+        "icon": "argentinaIcon",
+        "bondTermsId": "69f13b23fd30dea978ea7e17"
+    },
+    {
+        "_id": "69f13c135fed325bc6ea7e14",
+        "id": 17,
+        "code": "GD46D",
+        "name": "(GD46D) GD46D BONO USD 2046 L.N.Y.",
+        "typeId": "00000002e9755e12524d9720",
+        "icon": "argentinaIcon",
+        "bondTermsId": "69f13b23fd30dea978ea7e18"
+    }
+]

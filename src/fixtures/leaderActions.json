@@ -1,0 +1,14 @@
+[
+    {
+        "_id": "1",
+        "ticker": "AGRO",
+        "name": "(AGRO) ADECOAGRO S.A.",
+        "alerts": []
+    },
+    {
+        "_id": "2",
+        "ticker": "TRAN",
+        "name": "(TRAN) CIA DE TRANSP DE ENERGIA ELECTRICA",
+        "alerts": []
+    }
+]

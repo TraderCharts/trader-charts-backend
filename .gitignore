@@ -1,0 +1,37 @@
+# Node dependencies
+/node_modules/
+
+# Build / outputs
+/dist/
+/build/
+
+# Coverage
+/coverage/
+/lib-cov/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+.env.docker
+
+# Temp files
+*.tmp
+*.swp
+*.swo
+.DS_Store
+
+# IDE/editor configs
+*.code-workspace
+.idea/
+
+# Optional generated files
+docs/specs/swagger_runtime*
